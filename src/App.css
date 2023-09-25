@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.box {
+  height: 500px;
+  background: white;
+  width: 1000px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.App-header {
+  background-color: #b6a687;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h1 {
+  color:#A7DABB;
+  padding-right: 90px;
+}
+.inputBox {
+  margin-top: 70px;
+
+}
+input {
+  font-size: 12px;
+  padding: 12px 20px;
+  margin: 8px;
+  width:40%;
+  border-radius: 50px;
+}
+
+button {
+  background-color: #A7DABB;
+  color: white;
+  font-size: 20px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+
+}
+
+main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+}
+
+.translate-box {
+  height: 200px;
+  width: 100%;
+  color: black;
+}
+
+.translate-box p {
+  padding-left: 100px;
+  padding-top: 20px;
+}
+
+.yoda-img {
+  content: url("./yoda.png");
+  height: 200px;
+  width: 200px;
+  margin-right: 100px;
+}
+
+.switch {
+  float: left;
+  margin-left: 20px;
+  color: black;
+  font-size: 15px;
+}
+
+#light {
+  background-color: #b6a687;
+}
+
+
+#dark {
+  background-color:#3f3b34;
+}
+
+#dark h1 {
+  color: black;
+}
+
+#dark button {
+  background-color: black;
+}
