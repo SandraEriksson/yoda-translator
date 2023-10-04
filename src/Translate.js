@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
 import './App.css';
-import axios from 'axios';
 
 function Translate() {
     let [text, setText] = useState("");
     let [yodaText, setYodaText] = useState("");
 
     const onClick = () => {
-        axios
-            .post("/translate/yoda.json", { text })
-            .then(res => {
-                const { translated } = res.data.contents;
-                setYodaText(translated);
-            })
-    };
+        fetch("/translate/yoda.json", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ text }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            const { translated } = data.contents;
+            setYodaText(translated);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      };
 
 
     return (
